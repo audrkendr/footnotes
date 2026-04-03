@@ -26,7 +26,8 @@ def get_tiles():
         client_secret=CLIENT_SECRET,
         redirect_uri=REDIRECT_URI,
         scope="user-top-read",
-        open_browser=True 
+        open_browser=True,
+        show_dialog=True
     )
 
     try:
@@ -34,12 +35,11 @@ def get_tiles():
         token_info = sp_oauth.get_cached_token()
         
         if not token_info:
-            print("** No token found! Generating auth URL **")
+            #print("** No token found! Generating auth URL **")
             auth_url = sp_oauth.get_authorize_url()
-            print(f"** PLEASE OPEN THIS URL MANUALLY: {auth_url} **")
+            #print(f"** PLEASE OPEN THIS URL MANUALLY: {auth_url} **")
             return {"error": "Authentication required", "url": auth_url}
 
-        #print("** Token found. **")
         sp = spotipy.Spotify(auth=token_info['access_token'])
         
         #print("** Grabbing top tracks... **")
@@ -58,11 +58,10 @@ def get_tiles():
         return tracks
 
     except Exception as e:
-        print(f"** CRITICAL ERROR: {str(e)} **")
+        #print(f"** CRITICAL ERROR: {str(e)} **")
         return {"error": str(e)}
 
 @app.get("/callback")
 def callback(code: str):
     print(f"** Callback received. Code: {code[:10]}... **")
-    sp_oauth.get_access_token(code)
     return "Login successful! You can now refresh your React app."

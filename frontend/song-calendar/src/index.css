@@ -17,11 +17,9 @@
     @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto;
   }
 
-  /* The placeholder for future months 
   .upcoming-card {
     @apply aspect-square flex flex-col items-center justify-center rounded-lg transition-all duration-500 border border-white/10 shadow-inner;
   }
-  */
 
   .play-button {
     @apply bg-green-500 rounded-full p-3 shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform;
