@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* The main layout wrapper */
+  .page-container {
+    @apply min-h-screen bg-gray-900 text-white p-8 font-sans;
+  }
+
+  .song-card {
+    @apply relative group block rounded-lg overflow-hidden bg-black shadow-2xl transition-all hover:scale-105 hover:ring-2 hover:ring-green-500 cursor-pointer;
+  }
+
+  /* The main container for your 12 months */
+  .mosaic-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto;
+  }
+
+  /* The placeholder for future months 
+  .upcoming-card {
+    @apply aspect-square flex flex-col items-center justify-center rounded-lg transition-all duration-500 border border-white/10 shadow-inner;
+  }
+  */
+
+  .play-button {
+    @apply bg-green-500 rounded-full p-3 shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform;
+  }
+
+  .footprint-cursor {
+    /* White Footprint for the general background */
+  cursor: url('https://www.clker.com/cliparts/j/i/l/2/p/z/shoe-print-th.png') 16 16, auto;
+  }
+
+}
