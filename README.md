@@ -120,4 +120,4 @@ Whether you want to fix a bug, propose a new UI layout, or add a pre-configured 
 
 5. **Open** a Pull Request
 
-Have ideas on how to make this tool better for developers? Open an issue or reach out to me directly on [LinkedIn](https://www.linkedin.com/in/akendr/).
+Have ideas on how to make this tool better for developers? Open an issue or reach out to me directly on [X](https://x.com/AudreyDevelops) or [LinkedIn](https://www.linkedin.com/in/akendr/).
